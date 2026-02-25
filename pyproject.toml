@@ -1,0 +1,27 @@
+[project]
+name = "scribble"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Suhail Suhail", email = "suhailece@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "pillow>=12.1.1",
+    "pyyaml>=6.0.3",
+    "rich>=14.3.3",
+    "tensorboard>=2.20.0",
+    "torch>=2.10.0",
+    "torchaudio>=2.10.0",
+    "torchvision>=0.25.0",
+    "typer>=0.24.1",
+]
+
+[project.scripts]
+scribble = "scribble:main"
+
+[build-system]
+requires = ["uv_build>=0.9.29,<0.10.0"]
+build-backend = "uv_build"
