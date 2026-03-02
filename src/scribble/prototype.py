@@ -13,4 +13,15 @@ lr = 0.0002
 epochs = 50
 device = torch.device("cuda")
 
+# downloader
+transform = transforms.compose([
+    transforms.ToTensor(),
+    transforms.Normalize([0.5],[0.5])
+    ])
+
+dataloader = torch.utils.data.Dataloader(
+        torchvision.dataset.MNIST("./data", train=True, download=True, tranform=transform),
+        batch_size = batch_size, shuffle=True
+        )
+
 
